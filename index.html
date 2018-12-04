@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Misc17</title>
+</head>
+<body>
+
+<script>
+    var email = "cmadisonne@gmail.com";
+    var emailArray = email.split(' ');
+    function main(email) {
+        var newEmail = [];
+        for (var i=0; i < email.length; i++){
+            if (email[i] === "@"){
+                for (var j = email[i]; j < email.length; j++){
+                    newEmail.push(email[j].replace(email[i], "*"))
+                }
+            }
+            else if (email[i] === ""){
+              newEmail.push(email[i])
+            }
+            console.log(newEmail);
+        }
+        console.log(newEmail);
+    }
+    main(emailArray);
+</script>
+
+</body>
+</html>
